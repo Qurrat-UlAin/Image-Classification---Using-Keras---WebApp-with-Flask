@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Classifier</title>
+   
+</head>
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+#result {
+    text-align: center;
+    margin-top: 20px;
+}
+
+</style>
+
+<body>
+    <h1>Image Classifier</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" name="imageFile" id="imageFile" accept="image/*">
+        <button type="submit" onclick="uploadImage()">Upload Image</button>
+    </form>
+    <div id="result"></div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
